@@ -83,4 +83,4 @@ bot.on('message', (ReceivedMessage) => {
 });
 
 //handles login with API key
-bot.login('ODMwNDA0MDE2OTM2NDUyMTA2.YHGMAQ.7mcyVujA286isL9mClQniaD1ifs');
+bot.login('TOKEN');
