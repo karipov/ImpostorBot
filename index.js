@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const config = require('./config.json');
 
 //Sets the bot's status to "Type .help for a list of commands!"
 bot.on("ready", () => { 
@@ -46,7 +47,7 @@ bot.on('message', (ReceivedMessage) => {
       ReceivedMessage.channel.send("Cringe doesn't even begin to explain how this made me feel. \n My very soul sunk into oblivion. The air in my lungs suddenly became very thin, my every muscle relaxed, and all systems responsible for keeping me alive quietly powered down as my will to exist simply stopped but for a moment. There was no pain, no tunnel, no light, no dead friends or relatives to greet me. Only inner peace, as I was nearly freed from this mortal coil. \n Then, when my functions returned, I looked back up and it was still there. That damn thing never left my screen. It was mocking me. Reminding me that Hell is a very real place, and that place is called Earth.");
     }
     if (RandomInteger == 7 || RandomInteger == 8 || RandomInteger == 9) {
-      ReceivedMessage.channel.send("[WARNING EXTREME CRINGE PROCEED WITH CAUTION] \n \n Cringe, amongus, anime, fortnite, Dababy, big chungus, Karen’s,furries, the LGBTQ community, white gang members, band kids, thots, mrblocku, roblox, Minecraft, call of duty, Valorent, doom on console, Nintendo, Post Malone, Playboi Carti, Anti vaccers, anti mask people, anyone living in Texas, bri’ish people, Joe Biden, Donald trump, Hillary Clinton, AOC plays amangas, #1 victory royale, Tyler Blevins, Twitch, E-girls, traps, 9 year olds playing fortnite, playing PUBG in 2021, liking battle royale in 2021, putting milk before the cereal, snitching (or being tekashi), not watching pewdiepie, not being gangster, watching the NFL, still paying attention to the Toronto Raptors, being relevant, not getting canceled, dying, dying in armed conflict, having a different opinion, WWE, Florida, Activision, Ubisoft, Microsoft, CSGO in 2021, TF2 in 2021, valve, the U.S military, the U.S government, U.S military E-sports, E-sports in general, Mr beast, Dream, Dream Stan’s, half-life 3, halo infinite, professional curling, women’s basketball, women, women’s sports, the idea that women play video games, school, work, teachers, covid, the national guard, Vietnam, the 21st century and finally...you!");
+      ReceivedMessage.channel.send("[WARNING EXTREME CRINGE PROCEED WITH CAUTION] \n \n Cringe, amongus, anime, fortnite, Dababy, big chungus, Karen’s,furries, white gang members, band kids, thots, mrblocku, roblox, Minecraft, call of duty, Valorent, doom on console, Nintendo, Post Malone, Playboi Carti, Anti vaccers, anti mask people, anyone living in Texas, bri’ish people, Joe Biden, Donald trump, Hillary Clinton, AOC plays amangas, #1 victory royale, Tyler Blevins, Twitch, E-girls, traps, 9 year olds playing fortnite, playing PUBG in 2021, liking battle royale in 2021, putting milk before the cereal, snitching (or being tekashi), not watching pewdiepie, not being gangster, watching the NFL, still paying attention to the Toronto Raptors, being relevant, not getting canceled, dying, dying in armed conflict, having a different opinion, WWE, Florida, Activision, Ubisoft, Microsoft, CSGO in 2021, TF2 in 2021, valve, the U.S military, the U.S government, U.S military E-sports, E-sports in general, Mr beast, Dream, Dream Stan’s, half-life 3, halo infinite, professional curling, , school, work, teachers, covid, the national guard, Vietnam, the 21st century and finally...you!");
     }
     if(RandomInteger == 10 || RandomInteger == 11 || RandomInteger == 12) {
       ReceivedMessage.channel.send("How do I (13 M) get my family to stop making Among Us references? \n It seems like the more I (13 M) play Amongus, the more my family tries to embaras me. The other day, I overheard my dad (49 M) say that he needed to *complete tasks* while working at home😯🤬 don't worry it gets worse. Then I hear my Mom (42 F) say that the amount of time I spend on my computer is *suspiscios.* Ummm ok so (#1) ur too good to say *sus* 🤔 and (#2) u dont even play amogus??? 😂😂😂. Even my moms work friend (28 M or somthing idk) came over yesterday to *look at her vents* I'm not even making this up 🙄🙄🙄 But then the worse part😑 every sunday my granpa (69 M) comes over. He reminisces about his *Crewmates* from his Navy days and apparently a few of them died so u cry about it at dinner? Just start a new game FFS 😆 but he's lying so uhhh we get it bro: u just want attention 😯😅🤣 \n The problem is NONE of them even Play Omungus. How do i tell em that being a poser is a cringe Brie Larson unholesome Black History Month anti-chungus move?");
@@ -80,7 +81,12 @@ bot.on('message', (ReceivedMessage) => {
    ReceivedMessage.channel.send("Hey! I'm Impostor bot :D \n \n I've got a few useful features that you can directly activate, such as: \n .lenny - deletes your message and sends a lenny face instead! \n .kawaii - deletes your message and sends a cute face instead! \n .acid - deletes your message and sends an ascii dude on acid. \n .hug - deletes your message and sends a cute hugging bear instead :)");
   }
 
+  //Responds with a link to the github
+  if(ReceivedMessage.content == ".code") {
+    ReceivedMessage.channel.send("You can find the code here: https://github.com/LukasKelemen/ImpostorBot");
+  }
+
 });
 
 //handles login with API key
-bot.login('TOKEN');
+bot.login(config.token);
