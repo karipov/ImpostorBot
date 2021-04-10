@@ -85,9 +85,83 @@ bot.on('message', (ReceivedMessage) => {
     ReceivedMessage.channel.send("ʕっ•ᴥ•ʔっ");
   }
 
+  if(ReceivedMessage.content == ".gib") {
+    ReceivedMessage.delete();
+    ReceivedMessage.channel.send("༼ つ ◕_◕ ༽つ");
+  }
+
+  if(ReceivedMessage.content == ".confused") {
+    ReceivedMessage.delete();
+    ReceivedMessage.channel.send("(⊙_☉)");
+  }
+
+  if(ReceivedMessage.content == ".excite") {
+    ReceivedMessage.delete();
+    ReceivedMessage.channel.send("(ﾉ◕ヮ◕)ﾉ");
+  }
+
+  if(ReceivedMessage.content == ".lennywall") {
+    ReceivedMessage.delete();
+    ReceivedMessage.channel.send("┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴");
+  }
+
+  if(ReceivedMessage.content == ".happy") {
+    ReceivedMessage.delete();
+    ReceivedMessage.channel.send("(　＾∇＾) ");
+  }
+
+  if(ReceivedMessage.content == ".comeback") {
+    ReceivedMessage.delete();
+
+    RandomInteger = Math.floor(Math.random() * 13)
+
+    if (RandomInteger == 0) {
+      ReceivedMessage.channel.send("https://www.youtube.com/watch?v=RpkQEq75y18");
+    }
+    if (RandomInteger == 1) {
+      ReceivedMessage.channel.send("You’re the reason God created the middle finger.");
+    }
+    if (RandomInteger == 2) {
+      ReceivedMessage.channel.send("The people who tolerate you on a daily basis are the real heroes.");
+    }
+    if (RandomInteger == 3) {
+      ReceivedMessage.channel.send("If I wanted to hear from an asshole, I’d fart.");
+    }
+    if (RandomInteger == 4) {
+      ReceivedMessage.channel.send("It’s kind of hilarious watching you try to fit your entire vocabulary into one sentence.");
+    }
+    if (RandomInteger == 5) {
+      ReceivedMessage.channel.send("I thought of you today. It reminded me to take out the trash.");
+    }
+    if (RandomInteger == 6) {
+      ReceivedMessage.channel.send("Stupidity isn’t a crime, so you’re free to go.");
+    }
+    if (RandomInteger == 7) {
+      ReceivedMessage.channel.send("Please just tell me you don’t plan to home-school your kids.");
+    }
+    if (RandomInteger == 8) {
+      ReceivedMessage.channel.send("You are more disappointing than an unsalted pretzel.");
+    }
+    if (RandomInteger == 9) {
+      ReceivedMessage.channel.send("I’d slap you but I don’t want to make your face look any better.");
+    }
+    if (RandomInteger == 10) {
+      ReceivedMessage.channel.send("You are the human version of period cramps.");
+    }
+    if (RandomInteger == 11) {
+      ReceivedMessage.channel.send("What doesn’t kill you, disappoints me.");
+    }
+    if (RandomInteger == 12) {
+      ReceivedMessage.channel.send("Good story, but in what chapter do you shut the fuck up?");
+    }
+    if (RandomInteger == 13) {
+      ReceivedMessage.channel.send("May both sides of your pillow be uncomfortably warm tonight.");
+    }
+  }
+
   //Sends help command on request
   if(ReceivedMessage.content == ".help") {
-   ReceivedMessage.channel.send("Hey! I'm Impostor bot :D \n \n I've got a few useful features that you can directly activate, such as: \n .lenny - deletes your message and sends a lenny face instead! \n .kawaii - deletes your message and sends a cute face instead! \n .acid - deletes your message and sends an ascii dude on acid. \n .hug - deletes your message and sends a cute hugging bear instead :)");
+   ReceivedMessage.channel.send("Hey! I'm Impostor bot :D \n \n I've got a few useful features that you can directly activate, such as: \n .lenny - deletes your message and sends a lenny face instead! \n  .kawaii - deletes your message and sends a cute face instead! \n .acid - deletes your message and sends an ascii dude on acid. \n .hug - deletes your message and sends a cute hugging bear instead :) \n .gib - deletes your message and sends an emoji who just really wants something. \n .confused - deltes your message and sends you a confused emoji. \n .excite - deletes your message and sends you an excited emoji. \n .lennywall - deletes your message and sends a lenny hiding behind a wall. \n .happy - deletes your message and sends a happy emoji instead. \n .comeback - stuck in an argument? ImpostorBot will give you a handy comeback :D");
   }
 
   //Responds with a link to the github
