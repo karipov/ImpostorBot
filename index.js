@@ -55,6 +55,15 @@ bot.on('message', (ReceivedMessage) => {
   
   }
 
+  //Replies to a message containing 'useless'
+  if(ReceivedMessage.content.toLowerCase().split(" ").join("").includes('useless')) {
+    if (ReceivedMessage.author == bot.user) {
+      return
+    }
+
+    ReceivedMessage.channel.send("Useless? One might instead say 'About as useful as tits on a fish'");
+  }
+
   //Handles deleting prompt and replacing it with ascii emoji
   if(ReceivedMessage.content == ".lenny") {
     ReceivedMessage.delete();
