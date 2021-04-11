@@ -20,10 +20,10 @@ bot.on("ready", () => {
 // reads an incoming message and reacts accordingly
 bot.on('message', (ReceivedMessage) => {
   var conditions = Object.keys(replies);
-  var in_string = ReceivedMessage.content.toLowerCase().split(" ").join("");
+  var in_string = ReceivedMessage.content.toLowerCase();
 
-  // add string replacement of letter emojis to actual letters here
-  // so words like :b:ased are detected 
+  // based words detection
+  in_string = in_string.replace(" ", "").replace(":", "");
 
   var found = conditions.find(element => in_string.includes(element));
 

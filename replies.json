@@ -53,6 +53,12 @@
             "You can find the code here: https://github.com/LukasKelemen/ImpostorBot"
         ]
     },
+    ".lennywall": {
+        "delete": true,
+        "replies": [
+            "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"
+        ]
+    },
     ".lenny": {
         "delete": true,
         "replies": [
@@ -93,12 +99,6 @@
         "delete": true,
         "replies": [
             "(ﾉ◕ヮ◕)ﾉ"
-        ]
-    },
-    ".lennywall": {
-        "delete": true,
-        "replies": [
-            "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"
         ]
     },
     ".happy": {
