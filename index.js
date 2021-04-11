@@ -23,7 +23,11 @@ bot.on('message', (ReceivedMessage) => {
   var in_string = ReceivedMessage.content.toLowerCase();
 
   // based words detection
-  in_string = in_string.replace(" ", "").replace(":", "");
+  in_string = in_string
+    .replace(" ", "")
+    .replace(":", "")
+    .replace("🅱️", "b")
+    .replace("🅰️️", "a");
 
   var found = conditions.find(element => in_string.includes(element));
 
@@ -36,7 +40,6 @@ bot.on('message', (ReceivedMessage) => {
 
     ReceivedMessage.channel.send(randomChooser(chosen_arr["replies"]));
   }
-
 
 });
 
