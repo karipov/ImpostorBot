@@ -18,7 +18,7 @@ bot.on("ready", () => {
 })
 
 // reads an incoming message and reacts accordingly
-bot.on('message', (ReceivedMessage) => {
+bot.on('messageCreate', (ReceivedMessage) => {
   var conditions = Object.keys(replies);
   var in_string = ReceivedMessage.content.toLowerCase();
 
