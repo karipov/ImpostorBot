@@ -1,0 +1,7 @@
+{
+  "name": "ImpostorBot",
+  "version": "1.0.0",
+  "dependencies": {
+    "ytdl-core": "^4.10.1"
+  }
+}
