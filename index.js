@@ -24,7 +24,7 @@ bot.on("ready", () => {
 })
 
 // reads an incoming message and reacts accordingly
-bot.on('message', message => {
+bot.on('message', (message) => {
 
     let args = message.content.substring(PREFIX.length).split(" ");
 
@@ -38,14 +38,13 @@ bot.on('message', message => {
 
                 server.queue.shift();
 
-                server.dispatcher.on("end", function(){
+                server.dispatcher.on("finish", function(){
                     if (server.queue[0]){
                         play(connection, message);
-                    }
-                    else {
+                    } else {
                         connection.disconnect();
                     }
-                })
+                });
             }
 
 
