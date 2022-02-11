@@ -14,7 +14,7 @@ function randomChooser(in_array) {
 // sets the bots status
 bot.on("ready", () => {
   bot.user.setStatus("online");
-  bot.user.setActivity('Type !help for a list of commands!', { type: "PLAYING" })
+  bot.user.setActivity('Happy Valentines day! Type ,help for a list of commands!', { type: "PLAYING" })
 })
 
 // reads an incoming message and reacts accordingly
