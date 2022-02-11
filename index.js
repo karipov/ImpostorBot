@@ -1,20 +1,20 @@
 const discord = require('discord.js');
-const bot = new discord.Client();
+const bot = new discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] })
 const config = require('./config.json');
 const replies = require('./replies.json');
 
 
 function randomChooser(in_array) {
-  // floor rounds down to nearest integer and random is never 1
+  // floor rounds down to the nearest integer and random is never 1
   // therefore works for 1 length arrays too 
   return in_array[Math.floor(in_array.length * Math.random())];
 }
 
 
-// sets the bot's status
+// sets the bots status
 bot.on("ready", () => {
   bot.user.setStatus("online");
-  bot.user.setActivity('Type .help for a list of commands!', { type: "PLAYING" })
+  bot.user.setActivity('Type !help for a list of commands!', { type: "PLAYING" })
 })
 
 // reads an incoming message and reacts accordingly
@@ -31,7 +31,7 @@ bot.on('message', (ReceivedMessage) => {
 
   var found = conditions.find(element => in_string.includes(element));
 
-  if (found && ReceivedMessage.author != bot.user) {
+  if (found && ReceivedMessage.author !== bot.user) {
     var chosen_arr = replies[found]; // replies for correct word
 
     if (chosen_arr["delete"]) {
