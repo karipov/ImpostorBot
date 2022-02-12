@@ -1,0 +1,106 @@
+{
+  "comeback": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "https://www!youtube!com/watch?v=RpkQEq75y18",
+      "You’re the reason God created the middle finger!",
+      "The people who tolerate you on a daily basis are the real heroes!",
+      "If I wanted to hear from an asshole, I’d fart!",
+      "It’s kind of hilarious watching you try to fit your entire vocabulary into one sentence!",
+      "I thought of you today! It reminded me to take out the trash!",
+      "Stupidity isn’t a crime, so you’re free to go!",
+      "Please just tell me you don’t plan to home-school your kids!",
+      "You are more disappointing than an unsalted pretzel!",
+      "I’d slap you but I don’t want to make your face look any better!",
+      "You are the human version of period cramps!",
+      "What doesn’t kill you, disappoints me!",
+      "Good story, but in what chapter do you shut the fuck up?",
+      "May both sides of your pillow be uncomfortably warm tonight!"
+    ]
+  },
+  "help": {
+    "delete": false,
+    "prefix-required": true,
+    "replies": [
+      "Hey! I'm Impostor bot :D \n \n I've got a few useful features that you can directly activate, such as: \n !lenny - deletes your message and sends a lenny face instead! \n  !kawaii - deletes your message and sends a cute face instead! \n !acid - deletes your message and sends an ascii dude on acid! \n !hug - deletes your message and sends a cute hugging bear instead :) \n !gib - deletes your message and sends an emoji who just really wants something! \n !confused - deletes your message and sends you a confused emoji! \n !excite - deletes your message and sends you an excited emoji! \n !lennywall - deletes your message and sends a lenny hiding behind a wall! \n !happy - deletes your message and sends a happy emoji instead! \n !comeback - stuck in an argument? ImpostorBot will give you a handy comeback :D"
+    ]
+  },
+  "code": {
+    "delete": false,
+    "prefix-required": true,
+    "replies": [
+      "You can find the code here: https://github.com/whoisEllie/ImpostorBot"
+    ]
+  },
+  "lennywall": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"
+    ]
+  },
+  "lenny": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "( ͡° ͜ʖ ͡°)"
+    ]
+  },
+  "kawaii": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "(✿◠‿◠)"
+    ]
+  },
+  "acid": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "⊂(◉‿◉)つ"
+    ]
+  },
+  "hug": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "ʕっ•ᴥ•ʔっ"
+    ]
+  },
+  "gib": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "༼ つ ◕_◕ ༽つ"
+    ]
+  },
+  "confused": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "(⊙_☉)"
+    ]
+  },
+  "excite": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "(ﾉ◕ヮ◕)ﾉ"
+    ]
+  },
+    "happy": {
+    "delete": true,
+    "prefix-required": true,
+    "replies": [
+      "(　＾∇＾)"
+    ]
+  },
+  "estrogen": {
+    "delete": false,
+    "prefix-required": true,
+    "replies": [
+      "https://www.gendergp.com"
+    ]
+  }
+}
