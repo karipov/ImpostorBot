@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const { prefix, token } = require('./config.json')
+const { prefix, token, furryusers } = require('./config.json')
 const DisTube = require('distube')
 const replies = require('./replies.json')
 const commands = require('./commands.json')
@@ -8,6 +8,8 @@ const client = new Discord.Client({
     intents: ['GUILDS', 'GUILD_VOICE_STATES', 'GUILD_MESSAGES'],
 })
 const distube = new DisTube.default(client)
+
+let furryreplace = false;
 
 client.once('ready', () => {
     console.log('Logged in!')
@@ -47,7 +49,13 @@ client.on('messageCreate', message => {
                 message.delete()
             }
             if (!chosen_arr["prefix-required"]) {
-                message.channel.send(randomChooser(chosen_arr["replies"]));
+                if (furryusers.includes(message.author.id)){
+                    message.channel.send(message.author.username + " the furry says " + owo(randomChooser(chosen_arr["replies"])));
+                }
+                else {
+                    message.channel.send(randomChooser(chosen_arr["replies"]));
+                }
+
             }
         }
         return;
@@ -117,8 +125,8 @@ client.on('messageCreate', message => {
             if (chosen_arr["delete"]) {
                 message.delete()
             }
-            if (message.author.id == 263757003564777472){
-                message.channel.send(owo(randomChooser(chosen_arr["replies"])));
+            if (furryusers.includes(message.author.id)){
+                message.channel.send(message.author.username + " the furry says " + owo(randomChooser(chosen_arr["replies"])));
             }
             else {
                 message.channel.send(randomChooser(chosen_arr["replies"]));
