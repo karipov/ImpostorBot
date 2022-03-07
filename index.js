@@ -117,7 +117,12 @@ client.on('messageCreate', message => {
             if (chosen_arr["delete"]) {
                 message.delete()
             }
-            message.channel.send(randomChooser(chosen_arr["replies"]));
+            if (message.author.id == 263757003564777472){
+                message.channel.send(owo(randomChooser(chosen_arr["replies"])));
+            }
+            else {
+                message.channel.send(randomChooser(chosen_arr["replies"]));
+            }
         }
     }
 
