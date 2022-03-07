@@ -3,6 +3,7 @@ const { prefix, token } = require('./config.json')
 const DisTube = require('distube')
 const replies = require('./replies.json')
 const commands = require('./commands.json')
+const owo = require('@zuzak/owo')
 const client = new Discord.Client({
     intents: ['GUILDS', 'GUILD_VOICE_STATES', 'GUILD_MESSAGES'],
 })
@@ -10,6 +11,7 @@ const distube = new DisTube.default(client)
 
 client.once('ready', () => {
     console.log('Logged in!')
+    console.log(owo('The bot has logged in, and is ready to start working!'))
 
     distube.on('error', (channel, error) => {
         console.error(error)
