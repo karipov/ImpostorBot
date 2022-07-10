@@ -8,9 +8,6 @@ const client = new Discord.Client({
     intents: ['GUILDS', 'GUILD_VOICE_STATES', 'GUILD_MESSAGES'],
 })
 const distube = new DisTube.default(client)
-
-let furryreplace = false;
-
 client.once('ready', () => {
     console.log('Logged in!')
     console.log(owo('The bot has logged in, and is ready to start working!'))
@@ -49,14 +46,20 @@ client.on('messageCreate', message => {
                 message.delete()
             }
             if (!chosen_arr["prefix-required"]) {
-                if (furryusers.includes(message.author.id)){
-                    message.channel.send(message.author.username + " the furry says " + owo(randomChooser(chosen_arr["replies"])));
-                }
-                else {
-                    message.channel.send(randomChooser(chosen_arr["replies"]));
-                }
 
+            var response = randomChooser(chosen_arr["replies"]);
+
+            if (furryusers.includes(message.author.id)) {
+                if (chosen_arr['owofy']) {
+                    message.channel.send(owo("Hi " + message.author.username + " the furry: " + response));
+                } else {
+                    message.channel.send("Hi " + message.author.username + " the furry: " + response);
+                }
             }
+            else {
+                message.channel.send(response);
+            }
+        }
         }
         return;
     }
@@ -125,11 +128,18 @@ client.on('messageCreate', message => {
             if (chosen_arr["delete"]) {
                 message.delete()
             }
-            if (furryusers.includes(message.author.id)){
-                message.channel.send(message.author.username + " the furry says " + owo(randomChooser(chosen_arr["replies"])));
+
+            var response = randomChooser(chosen_arr["replies"]);
+
+            if (furryusers.includes(message.author.id)) {
+                if (chosen_arr['owofy']) {
+                    message.channel.send(owo("Hi " + message.author.username + " the furry: " + response));
+                } else {
+                    message.channel.send("Hi " + message.author.username + " the furry: " + response);
+                }
             }
             else {
-                message.channel.send(randomChooser(chosen_arr["replies"]));
+                message.channel.send(response);
             }
         }
     }

@@ -1,6 +1,7 @@
 {
   "comeback": {
     "delete": true,
+    "owofy": true,
     "prefix-required": true,
     "replies": [
       "https://www!youtube!com/watch?v=RpkQEq75y18",
@@ -21,6 +22,7 @@
   },
   "help": {
     "delete": false,
+    "owofy": true,
     "prefix-required": true,
     "replies": [
       "Hey! I'm Impostor bot :D \n \n I've got a few useful features that you can directly activate, such as: \n !music - help for music functions \n !lenny - deletes your message and sends a lenny face instead! \n  !kawaii - deletes your message and sends a cute face instead! \n !acid - deletes your message and sends an ascii dude on acid! \n !hug - deletes your message and sends a cute hugging bear instead :) \n !gib - deletes your message and sends an emoji who just really wants something! \n !confused - deletes your message and sends you a confused emoji! \n !excite - deletes your message and sends you an excited emoji! \n !lennywall - deletes your message and sends a lenny hiding behind a wall! \n !happy - deletes your message and sends a happy emoji instead! \n !comeback - stuck in an argument? ImpostorBot will give you a handy comeback :D"
@@ -28,6 +30,7 @@
   },
   "music": {
     "delete": false,
+    "owofy": true,
     "prefix-required": true,
     "replies": [
       "To use music features, make sure you're in a voice channel first! The available commands are: \n `!play` - Play and queue songs \n `!stop` - stop the current playback and get ImpostorBot to disconnect \n `!pause` - pauses playback \n `!resume` - resumes playback \n `!queue` - shows the current queue in chat"
@@ -35,6 +38,7 @@
   },
   "code": {
     "delete": false,
+    "owofy": true,
     "prefix-required": true,
     "replies": [
       "You can find the code here: https://github.com/whoisEllie/ImpostorBot"
@@ -42,6 +46,7 @@
   },
   "lennywall": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "┬┴┬┴┤ ͜ʖ ͡°) ├┬┴┬┴"
@@ -49,6 +54,7 @@
   },
   "lenny": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "( ͡° ͜ʖ ͡°)"
@@ -56,6 +62,7 @@
   },
   "kawaii": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "(✿◠‿◠)"
@@ -63,6 +70,7 @@
   },
   "acid": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "⊂(◉‿◉)つ"
@@ -70,6 +78,7 @@
   },
   "hug": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "ʕっ•ᴥ•ʔっ"
@@ -77,6 +86,7 @@
   },
   "gib": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "༼ つ ◕_◕ ༽つ"
@@ -84,6 +94,7 @@
   },
   "confused": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "(⊙_☉)"
@@ -91,6 +102,7 @@
   },
   "excite": {
     "delete": true,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "(ﾉ◕ヮ◕)ﾉ"
@@ -98,6 +110,7 @@
   },
     "happy": {
     "delete": true,
+      "owofy": false,
     "prefix-required": true,
     "replies": [
       "(　＾∇＾)"
@@ -105,6 +118,7 @@
   },
   "estrogen": {
     "delete": false,
+    "owofy": false,
     "prefix-required": true,
     "replies": [
       "https://www.gendergp.com"
