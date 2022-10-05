@@ -42,6 +42,7 @@ client.on('messageCreate', message => {
             var found = conditions.find(element => in_string.includes(element));
         if (found && message.author !== client.user) {
             var chosen_arr = replies[found]; // replies for correct word
+            if (!chosen_arr["blacklist"].includes(message.author.id)) return;
             if (chosen_arr["delete"] && !chosen_arr["prefix-required"]) {
                 message.delete()
             }

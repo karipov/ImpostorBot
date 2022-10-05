@@ -1,5 +1,6 @@
 {
   "based": {
+    "blacklist": ["626316718830125056", "263757003564777472", "263756159989710859"],
     "delete": false,
     "owofy": true,
     "prefix-required": false,
@@ -10,6 +11,7 @@
     ]
   },
   "cringe": {
+    "blacklist": ["267246192344301568"],
     "delete": false,
     "owofy": true,
     "prefix-required": false,
@@ -20,6 +22,7 @@
     ]
   },
   "amogus": {
+    "blacklist": ["267246192344301568"],
     "delete": false,
     "owofy": true,
     "prefix-required": false,
@@ -30,6 +33,7 @@
     ]
   },
   "dream": {
+    "blacklist": ["263757003564777472", "267246192344301568", "263756159989710859"],
     "delete": false,
     "owofy": false,
     "prefix-required": false,
@@ -38,14 +42,16 @@
     ]
   },
   "useless": {
+    "blacklist": ["263757003564777472"],
     "delete": false,
     "owofy": true,
     "prefix-required": false,
     "replies": [
-      "Useless? One might instead say 'About as useful as tits on a fish'"
+      "Useless? Only you are useless ellie >:("
     ]
   },
   "my valentine": {
+    "blacklist": ["263757003564777472", "263756159989710859", "626316718830125056", "358975290040647681"],
     "delete": false,
     "owofy": true,
     "prefix-required": false,
