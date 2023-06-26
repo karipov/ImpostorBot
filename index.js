@@ -1,69 +1,37 @@
 const Discord = require('discord.js')
-const { prefix, token, furryusers } = require('./config.json')
+const { prefix, token } = require('./config.json')
 const DisTube = require('distube')
-const replies = require('./replies.json')
 const commands = require('./commands.json')
-const owo = require('@zuzak/owo')
+
+
 const client = new Discord.Client({
     intents: ['GUILDS', 'GUILD_VOICE_STATES', 'GUILD_MESSAGES'],
 })
 const distube = new DisTube.default(client)
+
+function randomChooser(in_array) {
+    return in_array[Math.floor(in_array.length * Math.random())];
+}
+
+
 client.once('ready', () => {
     console.log('Logged in!')
     console.log(owo('The bot has logged in, and is ready to start working!'))
 
     distube.on('error', (channel, error) => {
         console.error(error)
-        channel.send(`An error encoutered: ${error.slice(0, 1979)}`) // Discord limits 2000 characters in a message
+        channel.send(`An error encoutered: ${error.slice(0, 1979)}`)
     })
 })
 
 client.on("ready", () => {
     client.user.setStatus("online");
-    client.user.setActivity("!help, Happy Valentine's Day!", { type: "PLAYING" })
+    client.user.setActivity("!help, Ready to Play :)", { type: "PLAYING" })
 })
 
-
-function randomChooser(in_array) {
-    // floor rounds down to the nearest integer and random is never 1
-    // therefore works for 1 length arrays too
-    return in_array[Math.floor(in_array.length * Math.random())];
-}
-
-
 client.on('messageCreate', message => {
-    // If we the bot is the author then we don't respond
+    // if we the bot is the author then we don't respond
     if (message.author.bot) return;
-    if (!message.content.startsWith(prefix) || message.author.bot){
-
-        var conditions = Object.keys(replies);
-        var in_string = message.content.toLowerCase();
-        if (conditions)
-            var found = conditions.find(element => in_string.includes(element));
-        if (found && message.author !== client.user) {
-            var chosen_arr = replies[found]; // replies for correct word
-            if (!chosen_arr["blacklist"].includes(message.author.id)) return;
-            if (chosen_arr["delete"] && !chosen_arr["prefix-required"]) {
-                message.delete()
-            }
-            if (!chosen_arr["prefix-required"]) {
-
-            var response = randomChooser(chosen_arr["replies"]);
-
-            if (furryusers.includes(message.author.id)) {
-                if (chosen_arr['owofy']) {
-                    message.channel.send(owo("Hi " + message.author.username + " the furry: " + response));
-                } else {
-                    message.channel.send("Hi " + message.author.username + " the furry: " + response);
-                }
-            }
-            else {
-                message.channel.send(response);
-            }
-        }
-        }
-        return;
-    }
 
     const args = message.content
         .slice(prefix.length)
@@ -71,6 +39,7 @@ client.on('messageCreate', message => {
         .split(' ')
     const command = args.shift().toLowerCase()
 
+    // distube commands
     if (command === 'play') {
         distube.play(message.member.voice.channel, args.join(' '), {
             message,
@@ -80,7 +49,7 @@ client.on('messageCreate', message => {
         if (distube.getQueue(message)) {
             message.channel.send(`Queued`);
         } else {
-            message.channel.send(`Playing your song! ඞ`)
+            message.channel.send(`Playing your song!`)
         }
     }
     else if (command === 'stop') {
@@ -97,12 +66,12 @@ client.on('messageCreate', message => {
             const queue = distube.getQueue(message)
             if (queue.songs.length > 1) {
                 distube.skip(message)
-                message.channel.send("skipped track");
+                message.channel.send("Skipped track");
             } else {
-                message.channel.send("No track to skip to! Pretty sus ඞ");
+                message.channel.send("No track to skip to!");
             }
         } else {
-            message.channel.send("No track to skip to! Pretty sus ඞ");
+            message.channel.send("No track to skip to!");
         }
     }
     else if (command === 'pause'){
@@ -115,36 +84,25 @@ client.on('messageCreate', message => {
     }
     else if (command === 'queue'){
         const queue = distube.getQueue(message);
-        message.channel.send('ඞ Current queue:\n' + queue.songs.map((song, id) =>
+        message.channel.send('Current queue:\n' + queue.songs.map((song, id) =>
             `**${id+1}**. ${song.name} - \`${song.formattedDuration}\``
         ).join("\n"));
     }
+
     else {
         var conditions = Object.keys(commands);
         var in_string = message.content.toLowerCase();
+
         if (conditions)
             var found = conditions.find(element => in_string.includes(element));
+
         if (found && message.author !== client.user) {
-            var chosen_arr = commands[found]; // replies for correct word
-            if (chosen_arr["delete"]) {
-                message.delete()
-            }
-
-            var response = randomChooser(chosen_arr["replies"]);
-
-            if (furryusers.includes(message.author.id)) {
-                if (chosen_arr['owofy']) {
-                    message.channel.send(owo("Hi " + message.author.username + " the furry: " + response));
-                } else {
-                    message.channel.send("Hi " + message.author.username + " the furry: " + response);
-                }
-            }
-            else {
-                message.channel.send(response);
-            }
+            // replies for correct word
+            var chosen_arr = commands[found]; 
+            if (chosen_arr["delete"]) { message.delete() }
+            message.channel.send(randomChooser(chosen_arr["replies"]));
         }
     }
-
 })
 
 client.login(token)
