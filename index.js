@@ -16,7 +16,6 @@ function randomChooser(in_array) {
 
 client.once('ready', () => {
     console.log('Logged in!')
-    console.log(owo('The bot has logged in, and is ready to start working!'))
 
     distube.on('error', (channel, error) => {
         console.error(error)
